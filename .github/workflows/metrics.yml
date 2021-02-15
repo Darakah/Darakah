@@ -1,4 +1,4 @@
-name: Metrics
+name: Darakah
 on:
   # Schedule updates
   schedule: [{cron: "* * * * *"}]
