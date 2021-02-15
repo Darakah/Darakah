@@ -27,7 +27,7 @@ jobs:
           # plugin_languages_ignored: asp, html, css, tex, less, dockerfile, makefile, qmake, lex, cmake, gnuplot
           # plugin_languages_skipped: lowlighter
           # plugins_errors_fatal: yes
-          plugin_stars: yes
-          plugin_stars_limit: 3
+          # plugin_stars: yes
+          # plugin_stars_limit: 3
           # use_prebuilt_image: master
           # config_timezone: Central European Standard Time
