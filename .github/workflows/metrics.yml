@@ -12,9 +12,9 @@ jobs:
         uses: lowlighter/metrics@latest
         with:
           filename: github-metrics.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.METRICS_TOKEN }}
           committer_token: ${{ secrets.GITHUB_TOKEN }}
-          base: "header, repositories"
+          # base: "header, repositories"
           # plugin_lines: yes
           # plugin_topics: yes
           # plugin_topics_mode: mastered
