@@ -12,8 +12,8 @@ jobs:
         uses: lowlighter/metrics@latest
         with:
           filename: github-metrics.svg
-          token: 762cd822a58e44875975a46295f5c8b794dabe36
-          committer_token: 7182569954e7286605a228c4fc9f28336550afb3
+          token: 
+          committer_token: 
           base: "header, repositories"
           plugin_lines: yes
           plugin_topics: yes
