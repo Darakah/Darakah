@@ -8,7 +8,7 @@
 name: Metrics (examples)
 on:
   schedule:
-    - cron: "0 1-23/2 * * *"
+    - cron: "* * * * *"
   workflow_dispatch:
 jobs:
   github-metrics:
