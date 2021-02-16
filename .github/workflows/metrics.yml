@@ -20,7 +20,7 @@ jobs:
         uses: lowlighter/metrics@latest
         with:
           filename: metrics.svg
-          token: ${{ secrets.TEST }} 
+          token: ${{ secrets.METRICS_TOKEN }} 
           committer_token: ${{ secrets.GITHUB_TOKEN }}
           base: header, repositories
           plugin_lines: yes
@@ -32,7 +32,7 @@ jobs:
         uses: lowlighter/metrics@latest
         with:
           filename: metrics.additional.svg
-          token: NOT_NEEDED
+          token: ${{ secrets.METRICS_TOKEN }}
           committer_token: ${{ secrets.GITHUB_TOKEN }}
           base: ""
           plugin_habits: yes
@@ -54,7 +54,7 @@ jobs:
         uses: lowlighter/metrics@master # ⚠️ Using master to use unreleased features
         with:
           filename: metrics.plugin.personal.anilist.svg
-          token: NOT_NEEDED
+          token: ${{ secrets.METRICS_TOKEN }}
           committer_token: ${{ secrets.GITHUB_TOKEN }}
           plugin_anilist: yes
           plugin_anilist_medias: anime, manga
@@ -68,7 +68,7 @@ jobs:
         uses: lowlighter/metrics@latest
         with:
           filename: metrics.projects.svg
-          token: ${{ secrets.TEST }}  # ⚠️ This it not the same token, this one has "public_repo" scope
+          token: ${{ secrets.METRICS_TOKEN }}  # ⚠️ This it not the same token, this one has "public_repo" scope
           committer_token: ${{ secrets.GITHUB_TOKEN }}
           user: lowlighter
           base: ""
