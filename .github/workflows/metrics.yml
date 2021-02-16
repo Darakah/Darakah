@@ -2,8 +2,6 @@ name: Metrics (examples)
 on:
   schedule:
     - cron: "* * * * *"
-  workflow_dispatch:
-  
 jobs:
   github-metrics:
     runs-on: ubuntu-latest
@@ -26,3 +24,4 @@ jobs:
           plugin_lines: yes
           plugins_errors_fatal: ${{ github.repository == 'Darakah/Darakah' }}
           # use_prebuilt_image: master # ⚠️ DO NOT USE THIS OPTION, this is for pulling pre-built master image to make workflow faster 
+
