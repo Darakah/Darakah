@@ -3,6 +3,7 @@ on:
   schedule:
     - cron: "* * * * *"
   workflow_dispatch:
+  
 jobs:
   github-metrics:
     runs-on: ubuntu-latest
