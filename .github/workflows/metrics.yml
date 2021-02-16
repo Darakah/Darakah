@@ -1,7 +1,7 @@
-name: Metrics (examples)
+name: Metrics
 on:
-  schedule:
-    - cron: "* * * * *"
+  # Schedule updates
+  schedule: [{cron: "* * * * *"}]
 jobs:
   github-metrics:
     runs-on: ubuntu-latest
