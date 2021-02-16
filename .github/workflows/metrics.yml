@@ -26,9 +26,9 @@ jobs:
         uses: lowlighter/metrics@master
         with:
           filename: metrics.classic.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.METRICS_TOKEN }}
           committer_token: ${{ secrets.GITHUB_TOKEN }}
           base: header, repositories
           plugin_lines: yes
-          plugins_errors_fatal: ${{ github.repository == 'Darakah/Darakah' }}
+          plugins_errors_fatal: ${{ github.repository == 'lowlighter/lowlighter' }}
           use_prebuilt_image: master # ⚠️ DO NOT USE THIS OPTION, this is for pulling pre-built master image to make workflow faster 
