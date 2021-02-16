@@ -32,7 +32,7 @@ jobs:
         uses: lowlighter/metrics@latest
         with:
           filename: metrics.additional.svg
-          token: ${{ TEST }}
+          token: NOT_NEEDED
           committer_token: ${{ secrets.GITHUB_TOKEN }}
           base: ""
           plugin_habits: yes
