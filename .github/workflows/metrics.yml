@@ -1,33 +1,34 @@
-name: Metrics
+# This is a workflow which display most of lowlighter/metrics features
+#
+# It is also used to detect broken plugins, so that's why "plugins_errors_fatal" is enabled on most of them,
+# but you should set it to no if you're copying steps from this workflow
+#
+# ⚠️ Following jobs all uses @master branch (unstable branch with unreleased features)
+
+name: Metrics (examples)
 on:
-  # Schedule updates
-  schedule: [{cron: "* * * * *"}]
-  push: {branches: ["master", "main"]}
+  schedule:
+    - cron: "0 1-23/2 * * *"
+  workflow_dispatch:
 jobs:
-  github-metrics-personal:
+  github-metrics:
     runs-on: ubuntu-latest
+    if: "github.repository == 'lowlighter/lowlighter'"
     steps:
 
-      - name: Personal metrics
-        uses: lowlighter/metrics@latest
-        with: 
-          filename: github-metrics.svg
+      # ======================================================================================
+      # 🖼️ TEMPLATES
+      # ======================================================================================
+
+      # Classic template example
+      - name: 📗 Classic template
+        if: ${{ success() || failure() }}
+        uses: lowlighter/metrics@master
+        with:
+          filename: metrics.classic.svg
           token: ${{ secrets.GITHUB_TOKEN }}
           committer_token: ${{ secrets.GITHUB_TOKEN }}
-          # base: "header, repositories"
-          # plugin_lines: yes
-          # plugin_topics: yes
-          # plugin_topics_mode: mastered
-          # plugin_followup: yes
-          # plugin_habits: yes
-          # plugin_habits_from: 200
-          # plugin_habits_facts: yes
-          # plugin_habits_charts: yes
-          # plugin_languages: yes
-          # plugin_languages_ignored: asp, html, css, tex, less, dockerfile, makefile, qmake, lex, cmake, gnuplot
-          # plugin_languages_skipped: lowlighter
-          # plugins_errors_fatal: yes
-          # plugin_stars: yes
-          # plugin_stars_limit: 3
-          # use_prebuilt_image: master
-          # config_timezone: America/New_York
+          base: header, repositories
+          plugin_lines: yes
+          plugins_errors_fatal: ${{ github.repository == 'Darakah/Darakah' }}
+          use_prebuilt_image: master # ⚠️ DO NOT USE THIS OPTION, this is for pulling pre-built master image to make workflow faster 
