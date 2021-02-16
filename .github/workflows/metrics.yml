@@ -20,7 +20,7 @@ jobs:
         uses: lowlighter/metrics@latest
         with:
           filename: metrics.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: NOT_NEEDED
           committer_token: ${{ secrets.GITHUB_TOKEN }}
           base: header, repositories
           plugin_lines: yes
@@ -32,7 +32,7 @@ jobs:
         uses: lowlighter/metrics@latest
         with:
           filename: metrics.additional.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: NOT_NEEDED
           committer_token: ${{ secrets.GITHUB_TOKEN }}
           base: ""
           plugin_habits: yes
@@ -68,7 +68,7 @@ jobs:
         uses: lowlighter/metrics@latest
         with:
           filename: metrics.projects.svg
-          token: ${{ secrets.GITHUB_TOKEN }} # ⚠️ This it not the same token, this one has "public_repo" scope
+          token: NOT_NEEDED # ⚠️ This it not the same token, this one has "public_repo" scope
           committer_token: ${{ secrets.GITHUB_TOKEN }}
           user: lowlighter
           base: ""
