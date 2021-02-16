@@ -1,10 +1,3 @@
-# This is a workflow which display most of lowlighter/metrics features
-#
-# It is also used to detect broken plugins, so that's why "plugins_errors_fatal" is enabled on most of them,
-# but you should set it to no if you're copying steps from this workflow
-#
-# ⚠️ Following jobs all uses @master branch (unstable branch with unreleased features)
-
 name: Metrics (examples)
 on:
   schedule:
@@ -13,7 +6,7 @@ on:
 jobs:
   github-metrics:
     runs-on: ubuntu-latest
-    if: "github.repository == 'lowlighter/lowlighter'"
+    if: "github.repository == 'Darakah/Darakah'"
     steps:
 
       # ======================================================================================
@@ -30,5 +23,5 @@ jobs:
           committer_token: ${{ secrets.GITHUB_TOKEN }}
           base: header, repositories
           plugin_lines: yes
-          plugins_errors_fatal: ${{ github.repository == 'lowlighter/lowlighter' }}
-          use_prebuilt_image: master # ⚠️ DO NOT USE THIS OPTION, this is for pulling pre-built master image to make workflow faster 
+          plugins_errors_fatal: ${{ github.repository == 'Darakah/Darakah' }}
+          # use_prebuilt_image: master # ⚠️ DO NOT USE THIS OPTION, this is for pulling pre-built master image to make workflow faster 
