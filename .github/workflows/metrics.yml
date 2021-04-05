@@ -33,7 +33,7 @@ jobs:
           plugin_habits_charts: yes
           plugin_languages: yes
           plugin_languages_ignored: asp, html, tex, makefile, qmake, cmake, javascript
-          # # plugin_languages_skipped: lowlighter / tex, makefile,
+          # # # plugin_languages_skipped: lowlighter / tex, makefile,
           plugins_errors_fatal: yes
           plugin_stars: yes
           plugin_stars_limit: 3
